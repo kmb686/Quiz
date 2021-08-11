@@ -1,0 +1,170 @@
+@media(max-width:700px){
+    .body{
+        font-size:40px;
+    }
+    #question{
+        font-size:60px;
+    }
+    #choices li{
+        background-color: #fca105;
+        border:1px solid #ccc;
+        font-size:60px;
+        padding:10px;
+        margin-bottom:30px;
+    }
+}
+
+body{
+    background:#efdec1;
+    font-size:18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width:650px;
+    margin:8px auto;
+    background: #fff;
+    border-radius:4px;
+    padding:16px;
+    position: relative;
+}
+
+.title{
+    border: 5px double darkgoldenrod;;
+}
+
+.title h1{
+    font-size:40px;
+    text-align: center;
+    font-weight:bold;
+    font-style: italic;
+    color:rgb(228, 11, 192);
+}
+
+.title p{
+    text-align: center;
+    font-size:18px;
+    letter-spacing:5px;
+}
+
+#result{
+    position: absolute;
+    width:630px;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.726);
+    top:250px;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    transition: 1s;
+}
+
+#result p{
+    font-size: 37px;
+}
+
+#result a{
+    font-size:36px;
+    display:block;
+    text-decoration: none;
+}
+
+#result.hidden{
+    transform: translateY(-500px);
+}
+
+#question{
+    margin-bottom:16px;
+    font-weight:bold;
+}
+
+#choices{
+    list-style: none;
+    padding:0;
+    margin-bottom:16px;
+}
+
+#choices li{
+    border:1px solid #ccc;
+    border-radius:4px;
+    padding:10px;
+    margin-bottom:10px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+/* 正解パターン */
+#choices li.correct{
+    background: yellow;
+    border-color: green;
+    color:black;
+    font-weight: bold;
+}
+
+#choices li.correct::after {
+    content:'………正解！『ぴーーーんぽーーーーーん！！すごーーい！』';
+}
+
+
+/* まちがい 3パターン */
+#choices li.wrongFirst{
+    background: black;
+    border-color: white;
+    color:orange;
+    font-weight: bold;
+}
+
+#choices li.wrongFirst::after {
+    content:'………失敗！『まちがえてるwwバッカみたいww』';
+}
+
+#choices li.wrongSecond{
+    background:black;
+    border-color: white;
+    color:deeppink;
+    font-weight: bold;
+}
+
+#choices li.wrongSecond::after {
+    content:'………残念！『ぶっぶ～（笑）惜しかったね～（笑）』';
+}
+
+#choices li.wrongThird{
+    background: black;
+    border-color: white;
+    color:red;
+    font-weight: bold;
+}
+
+#choices li.wrongThird::after {
+    content:'………大間違い！『ひゃはははは何それwwww』';
+}
+
+/* ホバーの時 */
+
+#choices li:hover{
+    background: black;
+    color:#f8f8f8;
+}
+
+/* ボタン、得点スタイル */
+
+#btn, #result a{
+    background:#3498db;
+    padding:8px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 0 #2880b9;
+    font-size:20px;
+}
+
+#btn.disabled{
+    background: #ccc;
+    box-shadow:0 4px 0 #bbb;
+    opacity: 0.7;
+}
